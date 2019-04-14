@@ -1,0 +1,15 @@
+# Example for docker-compose service definition
+
+version: "3.6"
+services:
+  mssql:
+    build: .
+    restart: unless-stopped
+    volumes:
+      - mssqldata:/var/opt/mssql
+      - ./my/custom/scripts:/code/scripts
+    networks:
+      - webnet
+    env_file: ./config/.env
+    ports:
+      - "1433:1433"

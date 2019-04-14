@@ -1,0 +1,17 @@
+language: python
+python:
+  - 3.6
+
+services:
+  - docker
+
+install:
+  - docker build -t mssql:latest .
+  - docker run -e 'ACCEPT_EULA=Y' -e 'SA_PASSWORD=MyStrongPassword1'
+    -d -p 1433:1433 --name mssql mssql
+
+script:
+  - docker ps | grep -q caddy  # there should be a docker process
+  - if ! [ $(curl -o - 127.0.0.1:1433; echo $?) -eq 52 ]; then
+      exit 1  # should return empty response
+    fi
