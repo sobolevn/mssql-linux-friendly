@@ -12,6 +12,4 @@ install:
 
 script:
   - docker ps | grep -q caddy  # there should be a docker process
-  - if ! [ $(curl -o - 127.0.0.1:1433; echo $?) -eq 52 ]; then
-      exit 1  # should return empty response
-    fi
+  - if ! [ $(curl -o - 127.0.0.1:1433; echo $?) -eq 52 ]; then exit 1 fi
