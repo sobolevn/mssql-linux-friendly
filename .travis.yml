@@ -14,4 +14,4 @@ install:
 script:
   - docker ps | grep -q mssql  # there should be a docker process
   # curl should return empty response, not "(7) Failed to connect":
-  - if ! [ $(curl -o - 127.0.0.1:1433; echo $?) -eq 52 ]; then exit 1; fi
+  - if ! [ $(curl -o - 127.0.0.1:1433; echo $?) -ge 52 ]; then exit 1; fi
