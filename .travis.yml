@@ -7,6 +7,7 @@ services:
 
 install:
   - docker build -t mssql:latest .
+  # See docs about these `-e` variables:
   - docker run -e 'ACCEPT_EULA=Y' -e 'SA_PASSWORD=MyStrongPassword1'
     -d -p 1433:1433 --name mssql mssql
 
