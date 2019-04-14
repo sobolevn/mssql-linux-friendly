@@ -8,8 +8,9 @@ services:
     volumes:
       - mssqldata:/var/opt/mssql
       - ./my/custom/scripts:/code/scripts
-    networks:
-      - webnet
-    env_file: ./config/.env
+    environment:
+      ACCEPT_EULA: "Y"
+      # Consider using `env_file:` or `docker secret`:
+      SA_PASSORD: "YOUR_STRONG_PASS"
     ports:
       - "1433:1433"
