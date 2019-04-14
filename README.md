@@ -35,6 +35,10 @@ To customize these files use [`volumes`](https://docs.docker.com/engine/referenc
 docker run -v ./your/custom/scripts:/code/scripts -e 'ACCEPT_EULA=Y' -e 'SA_PASSWORD=MyStrongPassword1' -p 1433:1433 -d mssql
 ```
 
+## docker-compose
+
+See [`docker-compose.yml`](https://github.com/sobolevn/mssql-linux-friendly/blob/master/docker-compose.yml) for a service example.
+
 ## License
 
 MIT.
