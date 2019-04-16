@@ -22,8 +22,8 @@ done
 
 echo '======= MSSQL SERVER STARTED ========'
 # Run the setup script to create the DB and the schema in the DB:
-$SQL -d master -i ./scripts/schema.sql
-$SQL -d master -i ./scripts/data.sql
+$SQL -d master -i /code/scripts/schema.sql
+$SQL -d master -i /code/scripts/data.sql
 echo '======= MSSQL CONFIG COMPLETE ======='
 
 # Evaluating passed command:
