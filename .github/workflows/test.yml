@@ -1,0 +1,34 @@
+name: test
+
+on:
+  push:
+    branches:
+      - master
+  pull_request:
+  workflow_dispatch:
+
+concurrency: 
+  group: ${{ github.head_ref || github.run_id }}
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+  
+    steps:
+    - uses: actions/checkout@v2
+
+    - name: build docker image
+      run: docker build -t mssql:latest .
+
+    - name: start container
+      run: |
+        # See docs about these `-e` variables:
+        docker run -e 'ACCEPT_EULA=Y' -e 'SA_PASSWORD=MyStrongPassword1'
+        -d -p 1433:1433 --name mssql mssql
+
+    - name: test
+      run: |
+        docker ps | grep -q mssql  # there should be a docker process
+        # curl should return empty response, not "(7) Failed to connect":
+        if ! [ $(curl -o - 127.0.0.1:1433; echo $?) -ge 52 ]; then exit 1; fi
