@@ -1,6 +1,9 @@
 # mssql-linux-friendly
 
-[![wemake.services](https://img.shields.io/badge/style-wemake.services-green.svg?label=&logo=data%3Aimage%2Fpng%3Bbase64%2CiVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAMAAAAoLQ9TAAAABGdBTUEAALGPC%2FxhBQAAAAFzUkdCAK7OHOkAAAAbUExURQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAP%2F%2F%2F5TvxDIAAAAIdFJOUwAjRA8xXANAL%2Bv0SAAAADNJREFUGNNjYCAIOJjRBdBFWMkVQeGzcHAwksJnAPPZGOGAASzPzAEHEGVsLExQwE7YswCb7AFZSF3bbAAAAABJRU5ErkJggg%3D%3D)](http://wemake.services) [![Build Status](https://travis-ci.org/sobolevn/mssql-linux-friendly.svg?branch=master)](https://travis-ci.org/sobolevn/mssql-linux-friendly) [![Dockerhub](https://img.shields.io/docker/pulls/sobolevn/mssql-linux-friendly.svg)](https://hub.docker.com/r/sobolevn/mssql-linux-friendly/) [![image size](https://images.microbadger.com/badges/image/sobolevn/mssql-linux-friendly.svg)](https://microbadger.com/images/sobolevn/mssql-linux-friendly) [![mssql's version](https://img.shields.io/badge/version-2017.CU12-blue.svg)](https://github.com/Microsoft/mssql-docker)
+[![wemake.services](https://img.shields.io/badge/style-wemake.services-green.svg?label=&logo=data%3Aimage%2Fpng%3Bbase64%2CiVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAMAAAAoLQ9TAAAABGdBTUEAALGPC%2FxhBQAAAAFzUkdCAK7OHOkAAAAbUExURQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAP%2F%2F%2F5TvxDIAAAAIdFJOUwAjRA8xXANAL%2Bv0SAAAADNJREFUGNNjYCAIOJjRBdBFWMkVQeGzcHAwksJnAPPZGOGAASzPzAEHEGVsLExQwE7YswCb7AFZSF3bbAAAAABJRU5ErkJggg%3D%3D)](http://wemake.services)
+[![test](https://github.com/sobolevn/mssql-linux-friendly/actions/workflows/test.yml/badge.svg)](https://github.com/sobolevn/mssql-linux-friendly/actions/workflows/test.yml)
+[![Dockerhub](https://img.shields.io/docker/pulls/sobolevn/mssql-linux-friendly.svg)](https://hub.docker.com/r/sobolevn/mssql-linux-friendly/)
+[![image size](https://images.microbadger.com/badges/image/sobolevn/mssql-linux-friendly.svg)](https://microbadger.com/images/sobolevn/mssql-linux-friendly) [![mssql's version](https://img.shields.io/badge/version-2017.CU12-blue.svg)](https://github.com/Microsoft/mssql-docker)
 
 `mssql` image that can be easily extended to load schema and data on startup.
 
